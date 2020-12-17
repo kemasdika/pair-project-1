@@ -16,12 +16,14 @@
     <div>
         <h1>Daftar Murid</h1>
         <table style="border-collapse: collapse" width="100%" border="1">
+            <button><a href="/students/add">Add Student</a></button>
             <thead>
                 <tr>
                     <th>No.</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone Number</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +33,7 @@
                         <td><%=e.first_name%> <%=e.last_name%></td>
                         <td><%=e.email%></td>
                         <td><%=e.phone_number%></td>
+                        <td><a href="/students/edit/<%=e.id%>">Edit</a> | <a href="/students/delete/<%=e.id%>">Delete</a></td>
                     </tr>
                 <% }) %>
             </tbody>
