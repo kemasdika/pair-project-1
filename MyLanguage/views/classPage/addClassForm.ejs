@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add Class Form</h1>
+    <form action="/classes/add" method="POST">
+        <label for="class_name">Class Name:</label><br>
+        <input type="text" name="class_name" required><br><br>
+        <label for="schedule">Schedule:</label><br>
+        <input type="text" name="schedule" required><br><br>
+        <label for="description">Description:</label><br>
+        <input type="text" name="description" required><br><br>
+        <label for="price">Price:</label><br>
+        <input type="text" name="price" required><br><br>
+        <input type="submit" value="Add Class">
+        <button><a href="/classes">Cancel</a></button>
+    </form>
+</body>
+</html>
