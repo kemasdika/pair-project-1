@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 20px 30%;
+        }
+        input[type=text], select {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        input[type=submit] {
+          width: 100%;
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+        
+        div {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+        </style>
+</head>
+<body>
+    <h3>Daftar Sekarang</h3>
+    <div>
+        <form action="/register" method="POST">
+            <div>
+                  <label for="username">username</label>
+                  <input type="text" id="username" name="username" placeholder="username">
+              
+                  <label for="password">password</label>
+                  <input type="text" id="password" name="password" placeholder="password">
+
+                  <label for="email">email</label>
+                  <input type="text" id="email" name="email" placeholder="email">
+
+                  <label for="first_name">first name</label>
+                  <input type="text" id="first_name" name="first_name" placeholder="first name">
+
+                  <label for="last_name">last name</label>
+                  <input type="text" id="last_name" name="last_name" placeholder="last name">
+
+                  <label for="phone_number">phone number</label>
+                  <input type="text" id="phone_number" name="phone_number" placeholder="phone number">
+              
+                  <label for="role">Role</label>
+                  <select id="role" name="role">
+                    <option value="student">student</option>
+                    <option value="admin">admin</option>
+                  </select>
+                
+                  <input type="submit" value="Daftar">
+              </div>
+        </form>
+    </div>
+</body>
+</html>
