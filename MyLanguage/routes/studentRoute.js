@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const classController = require("../controllers/classController")
+const StudentController = require("../controllers/studentController")
 
-// router.get("/classes", classController.list)
+router.get("/students", StudentController.list)
 
 module.exports = router
