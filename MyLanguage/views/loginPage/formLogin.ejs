@@ -51,6 +51,11 @@
 <body>
     <h3>Masuk Sekarang</h3>
     <div>
+      <% if (errors) { %>
+        <% errors.forEach(i => { %>
+          <strong><p style="color: red"><%= i %></p></strong>
+       <% }) %>
+      <% } %>
         <form action="/login" method="POST">
             <div>
                   <label for="username">username</label>

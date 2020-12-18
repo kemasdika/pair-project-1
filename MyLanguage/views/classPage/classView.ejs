@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/students">Murid</a></li>
+            <li><a href="/classes">kelas</a></li>
+        </ul>
+    </div>
+    <div>
+        <h1>Daftar Kelas</h1>
+        <a href="/classes/add">Add Class</a>
+        <table style="border-collapse: collapse" width="100%" border="1">
+            <thead>
+                <tr>
+                    <th>Name Kelas</th>
+                    <th>Jadwal</th>
+                    <th>Deskripsi</th>
+                    <th>Harga</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(e => { %>
+                    <tr>
+                        <td><%=e.class_name%></td>
+                        <td><%=e.schedule%></td>
+                        <td><%=e.description%></td>
+                        <td><%=e.price%></td>
+                        <td><a href="/classes/edit/<%=e.id%>">Edit</a> | <a href="/classes/delete/<%=e.id%>">Delete</a></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

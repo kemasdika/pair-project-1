@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/students">Murid</a></li>
+            <li><a href="/classes">kelas</a></li>
+        </ul>
+    </div>
+    <div>
+        <h1>Daftar Murid</h1>
+        <table style="border-collapse: collapse" width="100%" border="1">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach((e, i) => { %>
+                    <tr>
+                        <td><%=i + 1%></td>
+                        <td><%=e.first_name%> <%=e.last_name%></td>
+                        <td><%=e.email%></td>
+                        <td><%=e.phone_number%></td>
+                        <td><a href="/students/edit/<%=e.id%>">Edit</a> | <a href="/students/delete/<%=e.id%>">Delete</a></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
